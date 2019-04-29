@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+
+<html charset="utf-8" encoding="utf-8" lang="zh-CN" language="Chinese" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta name="language" content="Chinese">
+        <title>
+            立即执行 codemap/code 函数
+        </title>
+        <meta name="author" content="Nasy">
+        <meta name="owner" content="Nasy">
+        <meta name="copyright" content="© 2019 Nasy">
+        <meta name="og:site_name" content="Nasy Land">
+        <meta name="og:title" content="立即执行 codemap/code 函数">
+        <meta name="og:url" content="https://nasy.moe">
+        <meta name="og:description" content="Nasy 的花园，栽花养鱼闲聊的地方～">
+        <meta name="og:image" content="https://nasy.moe/images/icon.png">
+        <meta name="og:type" content="blog">
+        <meta name="viewport" content="height=device-height,width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui">
+        <meta name="HandleFriendly" content="True">
+        <meta name="MSThemeCompatible" content="no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="translucent black">
+        <meta name="msapplication-navbutton-color" content="translucent black">
+        <meta name="mssmarttagspreventparsing" content="true">
+        <meta name="theme-color" content="#ffeab6">
+        <meta http-equiv="Cache-Control" content="public,max-age=1800,max-stale,stale-while-revalidate=86400,stale-if-error=259200" rem="max-age=30minutes">
+        <meta http-equiv="Page-Enter" content="RevealTrans(Duration=1.0,Transition=1)">
+        <meta http-equiv="Page-Exit" content="RevealTrans(Duration=1.0,Transition=1)">
+        <link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="../../../styles/main.css" type="text/css" media="screen">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102577027-1">
+            
+        </script>
+        <script>
+            window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-102577027-1');
+        </script>
+        <script src="//instant.page/1.2.2" type="module" Integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU">
+            
+        </script>
+    </head>
+    <body>
+        <header id="header" class="header">
+            <h1>
+                <a title="home" href="../../../">
+                    Nasy Land
+                </a>
+            </h1>
+            <nav class="nasy-links">
+                <ul>
+                    <li>
+                        <a href="../../../" title="home">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../../about#About" title="about">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../../tags" title="tags">
+                            Tags
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../../../emacs.d" title="emacs configuration">
+                            Emacs Configuration
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:nasyxx+nasymoe@gmail.com" title="email me">
+                            Email Me
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main" class="main">
+            <article class="blog">
+    <header class="blog-header">
+        <h2 class="center-title">
+            立即执行 codemap/code 函数
+        </h2>
+        <section class="metas">
+            
+            <section class="author hide">
+                <p>
+                    Nasy
+                </p>
+            </section>
+            
+            
+            <section class="date">
+                <p>
+                    June 19, 2018
+                </p>
+            </section>
+            
+            
+            <section class="summary">
+                <p>
+                    我永远喜欢 map
+                </p>
+            </section>
+            
+            
+            <section class="meta tags">
+                <ul>
+                    <li class="tags-li"><a href="../../../tags/%E8%8A%B1/">#花</a></li><li class="tags-li"><a href="../../../tags/flower/">#flower</a></li><li class="tags-li"><a href="../../../tags/hana/">#hana</a></li><li class="tags-li"><a href="../../../tags/%E9%9A%8F%E7%AC%94/">#随笔</a></li><li class="tags-li"><a href="../../../tags/essay/">#essay</a></li><li class="tags-li"><a href="../../../tags/python/">#python</a></li>
+                </ul>
+            </section>
+            
+        </section>
+    </header>
+    <section class="blog-section">
+        <h1 id="前言">前言</h1>
+<p>自从 <code>Python 3</code> 把 <code>map</code> 函数变为惰性的之后，那些没有返回值的函数，怎样立即执行，把函数式爱好者，不喜欢写 <code>for</code> 的我难住了，因为直接写 <code>map(f, lst)</code> 返回的是一个 <code>&lt;map at 0x17c249c50&gt;</code>, 一个 <code>generator</code>. 函数 <code>f</code> 并没有被执行呢。</p>
+<h1 id="研究">研究</h1>
+<h2 id="起初我是用-list.">起初，我是用 <code>list</code>.</h2>
+<p>我为了执行这些，总是在外面套一层 <code>list</code> 函数，变为 <code>list(map(f, lst))</code> 。可想而知，这样是不好的，如果那个 <code>lst</code> 很大，里面的元素数量很多，最后生成一个 <code>list</code> 不但会拖慢速度，还会占很多内存（大概）。</p>
+<h2 id="用-for-循环来替代-map.">用 <code>for</code> 循环来替代 <code>map</code>.</h2>
+<p>我最早想到的，就是这个，就之前那个来说，很显然，可这样来替代 <code>map</code>:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">for</span> l <span class="kw">in</span> lst:</a>
+<a class="sourceLine" id="cb1-2" title="2">    f(l)</a></code></pre></div>
+<p>不过，一开始我就说了，不想用 <code>for</code> （好像是有点任性呢）。</p>
+<p>于是，这个方法不行🙅。</p>
+<h2 id="最后有了-all-和-any.">最后，有了 <code>all</code> 和 <code>any</code>.</h2>
+<p>想要判断一个 <code>list</code> 中是否有 <code>True</code> ，就可以在标准库中发现了这两个函数 <code>all</code> 和 <code>any</code>. 这两个函数一个是当 <code>list</code> 中全为 <code>True</code> 的时候，返回 <code>True</code> ，否则返回 <code>False</code> ，一个是当 <code>list</code> 中含有 <code>True</code> 的时候，返回 <code>True</code> ，否则 <code>False</code>.</p>
+<p>当我们的 <code>f</code> 没有返回值的时候，在 <code>Python 3</code> 中就是 <code>False</code> ，因此，此时只需要简单的 <code>any(map(f, lst))</code> 就可以立即执行这个没有返回值的 <code>map</code> 了。不过要注意的是， <strong>当函数 <code>f</code> 具有返回值，而且 <code>bool</code> 值为 <code>True</code> 的时候， <code>any</code> 就失效了，或者说，运行的不完整。</strong> 毕竟，有了返回值，为什么还要这样执行它呢？快把那些命令提出来，单独作为一个函数啊喂！</p>
+<h1 id="几条关于-map-的事项">几条关于 <code>map</code> 的事项</h1>
+<p>（非新手请直接略过，不过，大佬们大概也不会来看我的..）我在想之后或许会有一篇 <code>Python</code> 函数式感想出现呢w</p>
+<ul>
+<li><code>map</code> 速度是比 <code>for</code> 循环要快的，当然，列表推导式除外（只适用于目前的 <code>Python 3</code> ）</li>
+<li>列表推导式其实可以很简单的用 <code>map</code> + <code>filter</code> 的组合替代，虽然效率不怎么高:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1">(i <span class="op">+</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>) <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">+</span> i, <span class="bu">filter</span>(<span class="kw">lambda</span> x: x <span class="op">&gt;</span> <span class="dv">5</span>, <span class="bu">range</span>(<span class="dv">10</span>)))</a></code></pre></div>
+<ul>
+<li>当然，用上 <code>itertools</code> 库中的函数，比如 <code>takewhile</code> ，会更棒哟!</li>
+</ul>
+    </section>
+    <footer>
+        <section id="comment">
+            
+        </section>
+    </footer>
+    <script src="https://unpkg.com/vue/dist/vue.runtime.min.js">
+        
+    </script>
+    <script src="https://unpkg.com/vssue/dist/vssue.github.min.js">
+        
+    </script>
+    <script>
+        
+const comment = "Python 感想 002"
+
+
+const ctitle = "立即执行 codemap/code 函数"
+
+new Vue({
+  el: '#comment',
+  render: h => h('Vssue', {
+    props: {
+      title: ctitle,      options: {
+        state: "Nasy",
+        labels: ["comment", comment],
+        prefix: "",
+        owner: "nasyxx",
+        repo: "comments",
+        clientId: "cb5605d5ea28ce5ba8d2",
+        clientSecret: "942e0d9f31ea8d7d30845fa26bc51ed6551153d8",
+        autoCreateIssue: false,
+        issueContent: url => "Comment of: \n" + document.URL,
+      },
+    }
+  })
+})
+    </script>
+</article>
+
+        </main>
+        <footer id="footer" class="footer">
+            <header>
+                <nav class="nasy-links">
+                    <ul>
+                        <li>
+                            <a href="../../../" title="home">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../../about#About" title="about">
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../../tags" title="tags">
+                                Tags
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../../emacs.d" title="emacs configuration">
+                                Emacs Configuration
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:nasyxx+nasymoe@gmail.com" title="email me">
+                                Email Me
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="friend-links">
+                    <ul>
+                        <li>
+                            <a href="https://laobubu.net" title="laobubu">
+                                Laobubu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://yuki.yuki233.com" title="初雪">
+                                初雪
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://mitsuhachan.ml" title="三葉的喵窝">
+                                三葉的喵窝
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://blog.zsakvo.cc" title="水水的小窝">
+                                水水的小窝
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://daisuke.moe" title="白兔">
+                                白兔
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <section id="copyright">
+                <p>
+                    Copyright © 2019 Nasy
+                </p>
+            </section>
+        </footer>
+    </body>
+</html>
