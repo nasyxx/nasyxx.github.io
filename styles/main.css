@@ -319,6 +319,11 @@ body:hover
   box-shadow         : 0 2px 5px #d988bc;
 }
 
+#header .header-hide
+{
+  display : none;
+}
+
 
 #main:hover
 {
