@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Nasy Land</title>
+    <link href="https://nasy.moe/atom.xml" rel="self" />
+    <link href="https://nasy.moe" />
+    <id>https://nasy.moe/atom.xml</id>
+    <author>
+        <name>Nasy</name>
+        <email>nasyxx+nasymoe@gmail.com</email>
+    </author>
+    <updated>2018-09-04T00:00:00Z</updated>
+    <entry>
+    <title>gron -- Make JSON Greppable</title>
+    <link href="https://nasy.moe/Kusa/gron-make-json-greppable/index.html" />
+    <id>https://nasy.moe/Kusa/gron-make-json-greppable/index.html</id>
+    <published>2018-09-04T00:00:00Z</published>
+    <updated>2018-09-04T00:00:00Z</updated>
+    <summary type="html"><![CDATA[gron -- Make JSON Greppable]]></summary>
+</entry>
+<entry>
+    <title>Poetry 与 Python</title>
+    <link href="https://nasy.moe/Kusa/poetry-python/index.html" />
+    <id>https://nasy.moe/Kusa/poetry-python/index.html</id>
+    <published>2018-08-15T00:00:00Z</published>
+    <updated>2018-08-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[好用的 Python 依赖管理以及打包工具 Poetry.]]></summary>
+</entry>
+<entry>
+    <title>Python 3.7 带来的 Bug</title>
+    <link href="https://nasy.moe/Hana/Python/python-003/index.html" />
+    <id>https://nasy.moe/Hana/Python/python-003/index.html</id>
+    <published>2018-08-15T00:00:00Z</published>
+    <updated>2018-08-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[关键词 async 导致 Tensorflow 不能用。jedi 也有奇怪的问题。]]></summary>
+</entry>
+<entry>
+    <title>立即执行 codemap/code 函数</title>
+    <link href="https://nasy.moe/Hana/Python/python-002/index.html" />
+    <id>https://nasy.moe/Hana/Python/python-002/index.html</id>
+    <published>2018-06-19T00:00:00Z</published>
+    <updated>2018-06-19T00:00:00Z</updated>
+    <summary type="html"><![CDATA[我永远喜欢 map]]></summary>
+</entry>
+<entry>
+    <title>Python 字符串清理的思考</title>
+    <link href="https://nasy.moe/Hana/Python/python-001/index.html" />
+    <id>https://nasy.moe/Hana/Python/python-001/index.html</id>
+    <published>2018-06-15T00:00:00Z</published>
+    <updated>2018-06-15T00:00:00Z</updated>
+    <summary type="html"><![CDATA[字符串清理 codereplace/code or codestrip/code 速度验证以及思考。]]></summary>
+</entry>
+<entry>
+    <title>About</title>
+    <link href="https://nasy.moe/about/index.html" />
+    <id>https://nasy.moe/about/index.html</id>
+    <published>2018-05-03T00:00:00Z</published>
+    <updated>2018-05-03T00:00:00Z</updated>
+    <summary type="html"><![CDATA[About this blog and nasy, 关于此 blog 和 nasy.]]></summary>
+</entry>
+<entry>
+    <title>Incremental Update</title>
+    <link href="https://nasy.moe/Fish/incremental-update/index.html" />
+    <id>https://nasy.moe/Fish/incremental-update/index.html</id>
+    <published>2017-07-28T00:00:00Z</published>
+    <updated>2017-07-28T00:00:00Z</updated>
+    <summary type="html"><![CDATA[Compare the files within two folders.]]></summary>
+</entry>
+
+</feed>
