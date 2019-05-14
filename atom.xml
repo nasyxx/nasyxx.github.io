@@ -34,7 +34,7 @@
     <summary type="html"><![CDATA[关键词 async 导致 Tensorflow 不能用。jedi 也有奇怪的问题。]]></summary>
 </entry>
 <entry>
-    <title>立即执行 codemap/code 函数</title>
+    <title>立即执行 <code>map</code> 函数</title>
     <link href="https://nasy.moe/Hana/Python/python-002/index.html" />
     <id>https://nasy.moe/Hana/Python/python-002/index.html</id>
     <published>2018-06-19T00:00:00Z</published>
@@ -47,7 +47,7 @@
     <id>https://nasy.moe/Hana/Python/python-001/index.html</id>
     <published>2018-06-15T00:00:00Z</published>
     <updated>2018-06-15T00:00:00Z</updated>
-    <summary type="html"><![CDATA[字符串清理 codereplace/code or codestrip/code 速度验证以及思考。]]></summary>
+    <summary type="html"><![CDATA[字符串清理 <code>replace</code> or <code>strip</code> 速度验证以及思考。]]></summary>
 </entry>
 <entry>
     <title>About</title>

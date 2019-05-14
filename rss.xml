@@ -33,7 +33,7 @@
     <dc:creator>Nasy</dc:creator>
 </item>
 <item>
-    <title>立即执行 codemap/code 函数</title>
+    <title>立即执行 <code>map</code> 函数</title>
     <link>https://nasy.moe/Hana/Python/python-002/index.html</link>
     <description><![CDATA[我永远喜欢 map]]></description>
     <pubDate>Tue, 19 Jun 2018 00:00:00 UT</pubDate>
@@ -43,7 +43,7 @@
 <item>
     <title>Python 字符串清理的思考</title>
     <link>https://nasy.moe/Hana/Python/python-001/index.html</link>
-    <description><![CDATA[字符串清理 codereplace/code or codestrip/code 速度验证以及思考。]]></description>
+    <description><![CDATA[字符串清理 <code>replace</code> or <code>strip</code> 速度验证以及思考。]]></description>
     <pubDate>Fri, 15 Jun 2018 00:00:00 UT</pubDate>
     <guid>https://nasy.moe/Hana/Python/python-001/index.html</guid>
     <dc:creator>Nasy</dc:creator>
