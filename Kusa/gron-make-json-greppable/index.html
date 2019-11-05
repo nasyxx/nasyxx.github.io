@@ -154,44 +154,6 @@
 <h1 id="postscript">Postscript</h1>
 <p>这是一篇旧文章，写于 2018.5。</p>
     </section>
-    <footer>
-        <section id="comment">
-            
-        </section>
-    </footer>
-    <script src="https://unpkg.com/vue/dist/vue.runtime.min.js">
-        
-    </script>
-    <link rel="stylesheet" href="https://unpkg.com/vssue/dist/vssue.min.css" type="text/css" media="screen">
-    <script src="https://unpkg.com/vssue/dist/vssue.github.min.js">
-        
-    </script>
-    <script>
-        
-const comment = "gron -- Make JSON Greppable"
-
-
-const ctitle = "gron -- Make JSON Greppable"
-
-new Vue({
-  el: '#comment',
-  render: h => h('Vssue', {
-    props: {
-      title: ctitle,      options: {
-        state: "Nasy",
-        labels: ["comment", comment],
-        prefix: "",
-        owner: "nasyxx",
-        repo: "comments",
-        clientId: "cb5605d5ea28ce5ba8d2",
-        clientSecret: "942e0d9f31ea8d7d30845fa26bc51ed6551153d8",
-        autoCreateIssue: false,
-        issueContent: url => "Comment of: \n" + document.URL,
-      },
-    }
-  })
-})
-    </script>
 </article>
 
         </main>
