@@ -135,8 +135,8 @@
 <p>我为了执行这些，总是在外面套一层 <code>list</code> 函数，变为 <code>list(map(f, lst))</code> 。可想而知，这样是不好的，如果那个 <code>lst</code> 很大，里面的元素数量很多，最后生成一个 <code>list</code> 不但会拖慢速度，还会占很多内存（大概）。</p>
 <h2 id="用-for-循环来替代-map.">用 <code>for</code> 循环来替代 <code>map</code>.</h2>
 <p>我最早想到的，就是这个，就之前那个来说，很显然，可这样来替代 <code>map</code>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="cf">for</span> l <span class="kw">in</span> lst:</a>
-<a class="sourceLine" id="cb1-2" title="2">    f(l)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="cf">for</span> l <span class="kw">in</span> lst:</span>
+<span id="cb1-2"><a href="#cb1-2"></a>    f(l)</span></code></pre></div>
 <p>不过，一开始我就说了，不想用 <code>for</code> （好像是有点任性呢）。</p>
 <p>于是，这个方法不行🙅。</p>
 <h2 id="最后有了-all-和-any.">最后，有了 <code>all</code> 和 <code>any</code>.</h2>
@@ -148,8 +148,8 @@
 <li><code>map</code> 速度是比 <code>for</code> 循环要快的，当然，列表推导式除外（只适用于目前的 <code>Python 3</code> ）</li>
 <li>列表推导式其实可以很简单的用 <code>map</code> + <code>filter</code> 的组合替代，虽然效率不怎么高:</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb2-1" title="1">(i <span class="op">+</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>) <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">+</span> i, <span class="bu">filter</span>(<span class="kw">lambda</span> x: x <span class="op">&gt;</span> <span class="dv">5</span>, <span class="bu">range</span>(<span class="dv">10</span>)))</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>(i <span class="op">+</span> i <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>) <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">5</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">+</span> i, <span class="bu">filter</span>(<span class="kw">lambda</span> x: x <span class="op">&gt;</span> <span class="dv">5</span>, <span class="bu">range</span>(<span class="dv">10</span>)))</span></code></pre></div>
 <ul>
 <li>当然，用上 <code>itertools</code> 库中的函数，比如 <code>takewhile</code> ，会更棒哟!</li>
 </ul>
@@ -261,6 +261,11 @@ new Vue({
                         <li>
                             <a href="https://daisuke.moe" title="白兔">
                                 白兔
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://desvl.xyz/" title="desvl's blog">
+                                Desvl's Blog
                             </a>
                         </li>
                     </ul>
