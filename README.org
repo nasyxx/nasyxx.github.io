@@ -1,4 +1,4 @@
 * Nasy Personal Blog
 
-+ Address: https://nays.moe
++ Address: https://nasy.moe
 + Source: https://github.com/nasyxx/nasyxx.github.io
